@@ -48,3 +48,160 @@ Develop a **Business Intelligence solution** that allows monitoring and analysis
 - Implement **ETL processes and a Data Mart** for data integration.
 
 ---
+
+# 🏗️ Project Architecture
+
+The project follows a standard **BI pipeline architecture**:
+
+```mermaid
+flowchart TD
+
+A[Environmental Data Sources]
+B[Health & Mortality Data]
+
+A --> C[ETL Pipeline]
+B --> C
+
+C --> D[Data Warehouse / Data Mart]
+
+D --> E[Analytical Layer]
+
+E --> F[Power BI Dashboards]
+
+F --> G[Descriptive Analysis]
+F --> H[Statistical Analysis]
+F --> I[Clinical Insights]
+```
+
+---
+
+# 🗄️ Dimensional Model
+
+The analytical model was designed using **dimensional modeling principles**.
+
+## Grain
+
+```text
+Each record represents mortality aggregated by:
+- Year
+- Locality
+- Demographic attributes
+- Pollution indicators (PM₂.₅ / PM₁₀)
+```
+
+## Fact Table
+
+```text
+Fact_Mortality
+Measures:
+- Number of deaths
+- PM₂.₅ levels
+- PM₁₀ levels
+```
+
+## Dimensions
+
+```text
+Dim_Time
+Dim_Location
+Dim_Demographics
+Dim_Pollution
+```
+
+---
+
+# 📊 Analytical Approach
+
+The project includes **three types of analysis**.
+
+## 1️⃣ Descriptive Analysis
+
+Exploration of mortality patterns across time, demographics, and geography.
+
+Key findings:
+
+- Mortality fluctuated between **2015–2024**
+- Peaks observed in **2019 and 2023**
+- **51% of deaths correspond to males**
+- Highest mortality among **people aged 70+**
+- Localities with highest mortality:
+  - Kennedy
+  - Suba
+  - Engativá
+  - Ciudad Bolívar
+
+---
+
+## 2️⃣ Statistical Analysis
+
+Statistical methods were used to explore relationships between pollution exposure and mortality.
+
+Findings:
+
+- Positive correlation between **PM levels and mortality**
+- **PM₁₀ shows a stronger association than PM₂.₅**
+- Linear regression models indicate increasing mortality with higher pollution exposure
+
+---
+
+## 3️⃣ Clinical Analysis
+
+Clinical interpretation of results highlights epidemiological patterns.
+
+Key observations:
+
+- The most affected localities remain consistent across years
+- Disease burden is concentrated in **north and southwest Bogotá**
+- Results support the need for **targeted environmental policies**
+
+---
+
+# 📂 Data Sources
+
+Environmental datasets related to **air quality monitoring in Bogotá**.
+
+Examples include:
+
+- Bogotá environmental observatory datasets
+- IDEAM air quality monitoring systems
+
+These sources provide measurements for **PM₂.₅ and PM₁₀ concentrations** across different years and locations.
+
+---
+
+# 🛠️ Technologies Used
+
+
+- Python
+- SQL
+- Power BI
+- Cloud Data Platform
+- ETL Pipelines
+- Dimensional Modeling
+
+
+---
+
+# 📦 Project Deliverables
+
+The project includes:
+
+- Project documentation
+- ETL design and implementation
+- Multidimensional data model
+- Interactive dashboards
+- Final analytical report and presentation
+
+---
+
+
+Interdisciplinary collaboration between:
+
+- Data / Engineering students
+- Medical students
+
+---
+
+# 📄 License
+
+This repository is intended for **academic purposes**.
